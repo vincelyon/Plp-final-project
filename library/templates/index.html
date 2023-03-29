@@ -1,0 +1,45 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %} Library Management System {% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+<style>
+    body{
+		background-color: rgb(89, 114, 99);
+        color: black;
+	}
+</style>
+<h3   style="margin-top:2%;margin-left:2%;margin-top:10px;">WELCOME TO THE ONLINE LIBRARY MANAGEMENT SYSTEM</h3>
+<p><h5 style="margin-bottom:4%; margin-left:2%">This platform is a site for students to gain access to books that are issued to the Them,<br>Once a book is issued on our library you are given 7days and after that seven days the<br> book has to be returned. If the book is not retured in the given number of days a fine<br>of ZMK5 will be charged for every day that passes after the expiry date.</h5></p>
+<div style="margin-top: 50px;"></div>
+<br>
+        <div class="container" style="margin-left:14%;">
+            <div class="col-mid-12">
+                <div class="row">  
+                    <div class="col-md-3 mx-4 shadow" style="background-color:rgb(66, 157, 180);">
+                 <img src="./static/Admin.png" style="width: 200px; height: 190px; margin-top: 10px; margin-left:20px;margin-bottom: 10px;">
+                 <h5 class="text center">Admins its time to check on the new updates!!</h5>
+                 <a href="/admin_login/">
+                    <button class="btn btn-success my-3" style="margin-left: 20%;">Admin Login!!</button>
+                </a>
+            </div>
+        <div class="col-md-3 mx-1 shadow" style="background-color:rgb(66, 157, 180);">
+                 <img src="./static/student.png" style="width: 250px; height: 200px; margin-top: 10px; margin-left:5px;">
+                 <h5 class="text center">Students welcome back to the platform!!<h5>
+                 <a href="/student_login/">
+                    <button class="btn btn-success my-3" style="margin-left: 20%;">Student Login!!!</button>
+                </a>
+        </div>
+                <div class="col-md-3 mx-3 shadow" style="background-color:rgb(66, 157, 180);">
+                    <img src="./static/register.png" style="width: 200px; height: 190px; margin-top: 10px; margin-left:15px;margin-bottom: 10px;">
+                 <h5 class="text center">If you have no account click here to join us!!</h5>
+                 <a href="/student_registration">
+                    <button class="btn btn-success my-3" style="margin-left: 20%;">Register Now!!!</button>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+{% endblock %}

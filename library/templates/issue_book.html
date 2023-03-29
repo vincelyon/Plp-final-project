@@ -1,0 +1,50 @@
+{% extends 'admin_navbar.html' %}
+{% load static %}
+{% block title %} Issue Book {% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+<style>
+	input{width: 100%;
+	padding-bottom: 10px;
+	margin-top: 15px;
+	height: 6vh;
+	padding: 1em;
+	border-color: hsl(246, 25%, 77%);
+	border-style: solid;
+	border-radius: 5px;
+	}
+    body{
+		background-color: rgb(89, 114, 99);
+	}
+</style>
+
+<div class="col-md-12" style="margin-left:10px; margin-top: 40px;">
+    <div class="row" >
+        <div class="col-md-3"></div>
+        <div class="col-md-6 jumbotron my-3" style="background-color:rgb(66, 157, 180); color: white;">
+            <h3 class="text-center my-2"style="color:black;"><u><b>ISSUING A BOOK</b></u></h3>
+    <form method="POST"> {% csrf_token %}
+        {% for i in form %}
+        <div class="form-group" style="margin-left:10px;">
+            <br>
+          <label class="control-label col-xs-4">{{ i.label_tag }}</label>
+          <div class="col-xs-8 mt-2">
+          {{ i }}
+           </div>
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-success">ISSUE BOOK</button>
+    <br>
+</div>
+</form>
+{% endblock %}
+{% block js %}
+<script>
+    {% if alert %}
+    alert("Book Successfully Issued.")
+    document.location = "/issue_book"
+    {% endif %}
+</script>
+{% endblock %}
+
