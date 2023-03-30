@@ -130,6 +130,11 @@ def delete_student(request, myid):
     students.delete()
     return redirect("/view_students")
 
+def delete_issued_book(request, myid):
+    IssuedBook = IssuedBook.objects.filter(id=myid)
+    IssuedBook.delete()
+    return redirect("/view_issued_book")
+
 def change_password(request):
     if request.method == "POST":
         current_password = request.POST['current_password']

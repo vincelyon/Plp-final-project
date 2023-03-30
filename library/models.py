@@ -6,7 +6,7 @@ from datetime import datetime,timedelta
 class Book(models.Model):
     name = models.CharField(max_length=200)
     author = models.CharField(max_length=200)
-    isbn = models.PositiveIntegerField()
+    isbn = models.PositiveIntegerField(max_length = 100)
     category = models.CharField(max_length=50)
 
     def __str__(self):
@@ -27,7 +27,7 @@ class Student(models.Model):
 def expiry():
     return datetime.today() + timedelta(days=14)
 class IssuedBook(models.Model):
-    student_id = models.CharField(max_length=100, blank=True) 
+    student_id = models.BigAutoField(primary_key=True, default=0) 
     isbn = models.CharField(max_length=13)
     issued_date = models.DateField(auto_now=True)
     expiry_date = models.DateField(default=expiry)
