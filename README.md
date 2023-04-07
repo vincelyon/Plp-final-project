@@ -19,3 +19,11 @@ DONE BY LYONDO VINCENT
 EMAIL: vincentlyondo12@gmail.com
 Contact: +260772942123
          +260760931332 (whatsapp only)
+Login credentials
+Admin: 
+Username: lyondo
+Password: Password@1
+
+Student:
+Username: yellow
+Password: Password@1
